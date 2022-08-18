@@ -2,41 +2,41 @@ import React, { useState } from "react";
 import { RiAddLine } from "react-icons/ri";
 
 import styled from "styled-components";
+import Underline from "../../UI/Underline";
 
 const data = [
   {
-    question: "What causes brown crispy leaves?",
+    question: "Sale of material handling equipment",
     answer:
-      "Plants are easy way to add color energy and transform your space but which planet is for you. Choosing the right plant.",
+      "We facilitate sale of all Indian and imported material handling equipment, such as forklift, stacker, hand pallet truck and rich truck.",
   },
   {
-    question: "My flowers are falling off or dying?",
-    answer:
-      "Plants are easy way to add color energy and transform your space but which planet is for you. Choosing the right plant.",
+    question: "Spares for material handling equipment",
+    answer: "We also deal in spare parts for all material handling equipment",
   },
   {
-    question: "What causes leaves to become pale?",
+    question: "AC & DC motor repair",
     answer:
-      "Plants are easy way to add color energy and transform your space but which planet is for you. Choosing the right plant. ",
+      "We also carry out repair work for AC and DC motor for material handling equipment’s ",
   },
   {
-    question: "How do i choose a plant?",
+    question: "All type battery repair",
     answer:
-      "Plants are easy way to add color energy and transform your space but which planet is for you. Choosing the right plant.",
+      "We do all type of battery repair work of Indian and Imported make.",
   },
   {
-    question: "How do I change the pots?",
+    question: "Safety equipment for material handling.",
     answer:
-      "Plants are easy way to add color energy and transform your space but which planet is for you. Choosing the right plant.",
+      "We also sell safety equipment for carrying out material handling activities.",
   },
   {
-    question: "Why are gnats flying around my plant?",
+    question: "Maintenance contracts for MHE",
     answer:
-      "Plants are easy way to add color energy and transform your space but which planet is for you. Choosing the right plant.",
+      "We provide annual , bi-annual and time based  service contracts for the maintenance of material handling equipment’s.",
   },
 ];
 
-const Question = () => {
+const Services = () => {
   const [selected, setSelected] = useState(null);
   const toggle = (i) => {
     if (selected === i) {
@@ -49,10 +49,11 @@ const Question = () => {
     <Wrapper>
       <section className="questions section " id="faqs">
         <h2 className="section__title-center questions__title container">
-          Some common questions <br />
-          were often asked
+          Our Services
         </h2>
+
         <div className="container grid">
+          <Underline />
           <div className="group">
             {data.map((item, i) => (
               <div
@@ -90,6 +91,7 @@ const Wrapper = styled.div`
   }
   .questions {
     background-color: var(--question-container-color);
+    padding-bottom: 2rem;
   }
 
   .questions__item {
@@ -188,4 +190,4 @@ const Wrapper = styled.div`
   }
 `;
 
-export default Question;
+export default Services;

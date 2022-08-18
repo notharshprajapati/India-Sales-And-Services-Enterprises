@@ -3,12 +3,7 @@ import styled from "styled-components";
 
 import Button from "./Button";
 
-import {
-  RiLeafLine,
-  RiFacebookFill,
-  RiInstagramLine,
-  RiTwitterFill,
-} from "react-icons/ri";
+import { RiFacebookFill, RiInstagramLine, RiTwitterFill } from "react-icons/ri";
 
 import card1 from "../assets/card1.png";
 import card2 from "../assets/card2.png";
@@ -22,8 +17,7 @@ const Footer = () => {
         <div className="footer__container container grid">
           <div className="footer__content">
             <a href="#" className="footer__logo">
-              <RiLeafLine className=" footer__logo-icon" />
-              Plantex
+              India Sales And Services Enterprises
             </a>
             <h3 className="footer__title">
               Subscribe to our newsletter <br />
@@ -51,7 +45,7 @@ const Footer = () => {
           <div className="footer__content">
             <h3 className="footer__title">Contact Us</h3>
             <ul className="footer__data">
-              <li className="footer__information">+999 888 777</li>
+              <li className="footer__information">+91 70655 43498</li>
               <div className="footer__social">
                 <a
                   href="https://www.facebook.com/"

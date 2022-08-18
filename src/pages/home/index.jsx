@@ -1,12 +1,16 @@
 import React from "react";
 import Intro from "./Intro";
-import Plants from "./plants";
+import About from "./About";
+import Services from "./Services";
+import Partners from "./Partners";
 
 const index = () => {
   return (
     <div>
       <Intro />
-      <Plants />
+      <About />
+      <Services />
+      <Partners />
     </div>
   );
 };

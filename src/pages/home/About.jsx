@@ -1,27 +1,34 @@
 import React from "react";
 import styled from "styled-components";
-
-import home from "../../assets/home.jpg";
+import Button from "../../UI/Button";
+import { NavLink } from "react-router-dom";
+import home_about from "../../assets/home_about.jpg";
 import Underline from "../../UI/Underline";
-
-const Intro = () => {
+const About = () => {
   return (
     <Wrapper>
       <section className="home">
         <div className="home__container container grid">
-          <img src={home} alt="" className="home__img" />
+          <img src={home_about} alt="" className="home__img" />
           <div className="home__data">
-            <h3>Material Handling Equipment Services</h3>
-            <h1 className="home__title">
-              Pioneers of the
-              <br /> material handling <br />
-              industry in india
-            </h1>
+            <h1 className="home__title">About us</h1>
             <Underline />
+            <h3>
+              India sales and services enterprises established in the year 2016
+            </h3>
             <p className="home__description">
-              We are the best when it comes to material handling solutions in
-              India.
+              in Delhi, India, with an average office setup to serve the
+              Material Handling Industry.
             </p>
+            <p className="home__description" style={{ marginBottom: "2rem" }}>
+              Since inception the company&#39;s goal has been “Best Quality at
+              Economical Cost with Quick Service” and this is the Success
+              Mantra. Customers&#39; feedback and support has made us one of the
+              reputed names in the material handling industry.
+            </p>
+            <NavLink to="/about">
+              <Button text="Read more" />
+            </NavLink>
           </div>
         </div>
       </section>
@@ -31,8 +38,8 @@ const Intro = () => {
 
 const Wrapper = styled.div`
   h3 {
+    padding-top: 1rem;
     padding-bottom: 1rem;
-    color: var(--first-color);
   }
   .home {
     padding: 3.5rem 0 2rem;
@@ -50,15 +57,14 @@ const Wrapper = styled.div`
   }
 
   .home__title {
-    font-size: 3rem;
+    font-size: 2rem;
     line-height: 140%;
     margin-bottom: 2rem;
     transition: 0.4s;
   }
 
   .home__description {
-    margin-top: 1rem;
-    margin-bottom: var(--mb-2-5);
+    margin-bottom: 1rem;
   }
 
   /*=============== BREAKPOINTS ===============*/
@@ -79,37 +85,35 @@ const Wrapper = styled.div`
     }
 
     .home {
-      padding: 10rem 0 5rem;
+      padding: 5rem 0 5rem;
     }
-    .home__title {
-      font-size: 2rem;
-    }
+
     .home__container {
       align-items: center;
     }
 
     .home__img {
       width: 400px;
-      order: 1;
+      margin-right: 5vh;
+      order: -1;
     }
   }
 
   /* For large devices */
   @media screen and (min-width: 992px) {
     .home {
-      padding: 13rem 0 5rem;
-    }
-    .home__title {
-      font-size: 3rem;
-    }
-    .home__img {
-      width: 500px;
+      padding: 5rem 0 5rem;
     }
 
-    .home__description {
-      padding-right: 7rem;
+    .home__img {
+      width: 450px;
+      margin-right: 7vh;
+    }
+    .home__data {
+      padding-right: 1rem;
+      text-align: justify;
     }
   }
 `;
 
-export default Intro;
+export default About;
