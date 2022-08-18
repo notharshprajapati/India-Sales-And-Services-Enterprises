@@ -36,9 +36,9 @@ const Footer = () => {
           <div className="footer__content">
             <h3 className="footer__title">Our Address</h3>
             <ul className="footer__data">
-              <li className="footer__information">1234 - Peru</li>
-              <li className="footer__information">La Libertad - 43210</li>
-              <li className="footer__information">123-456-789</li>
+              <li className="footer__information">
+                Plot 88-m, road no. 1, suvidha enclave, baprola vihar, Delhi
+              </li>
             </ul>
           </div>
 
@@ -46,23 +46,6 @@ const Footer = () => {
             <h3 className="footer__title">Contact Us</h3>
             <ul className="footer__data">
               <li className="footer__information">+91 70655 43498</li>
-              <div className="footer__social">
-                <a
-                  href="https://www.facebook.com/"
-                  className="footer__social-link"
-                >
-                  <RiFacebookFill />
-                </a>
-                <a
-                  href="https://www.instagram.com/"
-                  className="footer__social-link"
-                >
-                  <RiInstagramLine />
-                </a>
-                <a href="https://twitter.com/" className="footer__social-link">
-                  <RiTwitterFill />
-                </a>
-              </div>
             </ul>
           </div>
 
@@ -77,7 +60,7 @@ const Footer = () => {
           </div>
         </div>
         <p className="footer__copy">
-          &#169; notHarshPrajapati. All rigths reserved
+          &#169; India Sales And Services Enterprises. All rigths reserved
         </p>
       </footer>
     </Wrapper>
@@ -144,21 +127,6 @@ const Wrapper = styled.div`
 
   .footer__information {
     font-size: var(--small-font-size);
-  }
-
-  .footer__social {
-    display: inline-flex;
-    column-gap: 0.75rem;
-  }
-
-  .footer__social-link {
-    font-size: 1rem;
-    color: var(--text-color);
-    transition: 0.3s;
-  }
-
-  .footer__social-link:hover {
-    transform: translateY(-0.25rem);
   }
 
   .footer__cards {

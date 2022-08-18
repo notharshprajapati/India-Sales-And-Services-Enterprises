@@ -1,12 +1,16 @@
 import React from "react";
-import About from "./About";
-import Steps from "./Steps";
+import About1 from "./About1";
+import About2 from "./About2";
+import Mission from "./Mission";
+import Why from "./Why";
 
 const index = () => {
   return (
     <div>
-      <About />
-      <Steps />
+      <About1 />
+      <About2 />
+      <Why />
+      <Mission />
     </div>
   );
 };
