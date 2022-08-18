@@ -14,9 +14,9 @@ const SharedLayout = () => {
     setScrollPosition(position);
   };
 
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, [pathname]);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
 

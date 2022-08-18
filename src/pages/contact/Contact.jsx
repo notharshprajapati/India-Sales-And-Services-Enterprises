@@ -21,7 +21,9 @@ const Contact = () => {
                 </h3>
                 <span className="contact__description">
                   <RiPhoneLine className="contact__icon" />
-                  +999 888 777
+                  +91 70655 43498
+                  <br />
+                  +91 92057 19937
                 </span>
               </div>
 
@@ -29,7 +31,9 @@ const Contact = () => {
                 <h3 className="contact__subtitle">Write us by mail</h3>
                 <span className="contact__description">
                   <RiMailLine className="contact__icon" />
-                  user@gmail.com
+                  sales@indiasalesservicesmhe.com
+                  <br />
+                  marketing@indiasalesservicesmhe.com
                 </span>
               </div>
             </div>
