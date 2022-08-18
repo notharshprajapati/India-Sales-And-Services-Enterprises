@@ -37,7 +37,9 @@ const Footer = () => {
             <h3 className="footer__title">Our Address</h3>
             <ul className="footer__data">
               <li className="footer__information">
-                Plot 88-m, road no. 1, suvidha enclave, baprola vihar, Delhi
+                GROUND FLOOR, PLOT NO.88-M KH NO. 45/17, GAIL NO. 1, SUVIDHA
+                ENCLAVE, BAPROLA VIHAR, BLOCK E, NEAR JAGDISH VATIKA, Delhi,
+                110043
               </li>
             </ul>
           </div>
@@ -46,6 +48,12 @@ const Footer = () => {
             <h3 className="footer__title">Contact Us</h3>
             <ul className="footer__data">
               <li className="footer__information">+91 70655 43498</li>
+              <li className="footer__information">
+                marketing@indiasalesservicesmhe.com
+              </li>
+              <li className="footer__information">
+                sales@indiasalesservicesmhe.com
+              </li>
             </ul>
           </div>
 

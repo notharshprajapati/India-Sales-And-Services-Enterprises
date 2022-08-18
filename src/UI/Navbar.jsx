@@ -5,7 +5,7 @@ import { TbForklift } from "react-icons/tb";
 
 import { RiCloseLine, RiMenuLine } from "react-icons/ri";
 
-import links from "../Const.js";
+import { links } from "../Const.js";
 import Theme from "./Theme.jsx";
 
 const Navbar = ({ scrollPosition }) => {

@@ -1,98 +1,38 @@
 import React from "react";
 import styled from "styled-components";
-import { RiShoppingBagLine } from "react-icons/ri";
-
-import product1 from "../../assets/product1.png";
-import product2 from "../../assets/product2.png";
-import product3 from "../../assets/product3.png";
-import product4 from "../../assets/product4.png";
-import product5 from "../../assets/product5.png";
-import product6 from "../../assets/product6.png";
-
+import { ProductsData } from "../../Const";
 const Products = () => {
   return (
     <Wrapper>
       <section className="product section container" id="products">
-        <h2 className="section__title-center">
-          Check out our <br />
-          products
-        </h2>
-
-        <p className="product__description">
-          Here are some selected plants from our showroom, all are in excellent
-          shape and has a long life span. Buy and enjoy best quality.
-        </p>
-
-        <div className="product__container grid">
-          <article className="product__card">
-            <div className="product__circle"></div>
-            <img src={product1} alt="" className="product__img" />
-            <h3 className="product__title">Cacti Plant</h3>
-            <span className="product__price">$19.99</span>
-            <button className="button--flex product__button">
-              <RiShoppingBagLine />
-            </button>
-          </article>
-
-          <article className="product__card">
-            <div className="product__circle"></div>
-            <img src={product2} alt="" className="product__img" />
-            <h3 className="product__title">Cactus Plant</h3>
-            <span className="product__price">$11.99</span>
-            <button className="button--flex product__button">
-              <RiShoppingBagLine />
-            </button>
-          </article>
-
-          <article className="product__card">
-            <div className="product__circle"></div>
-            <img src={product3} alt="" className="product__img" />
-            <h3 className="product__title">Aloe Vera Plant</h3>
-            <span className="product__price">$7.99</span>
-            <button className="button--flex product__button">
-              <RiShoppingBagLine />
-            </button>
-          </article>
-
-          <article className="product__card">
-            <div className="product__circle"></div>
-            <img src={product4} alt="" className="product__img" />
-            <h3 className="product__title">Succulent Plant</h3>
-            <span className="product__price">$4.99</span>
-            <button className="button--flex product__button">
-              <RiShoppingBagLine />
-            </button>
-          </article>
-
-          <article className="product__card">
-            <div className="product__circle"></div>
-            <img src={product5} alt="" className="product__img" />
-            <h3 className="product__title">Succulent Plant</h3>
-            <span className="product__price">$11.99</span>
-            <button className="button--flex product__button">
-              <RiShoppingBagLine />
-            </button>
-          </article>
-
-          <article className="product__card">
-            <div className="product__circle"></div>
-            <img src={product6} alt="" className="product__img" />
-            <h3 className="product__title">Green Plant</h3>
-            <span className="product__price">$8.99</span>
-            <button className="button--flex product__button">
-              <RiShoppingBagLine />
-            </button>
-          </article>
+        <div className="card">
+          <h2 className="section__title-center">
+            Check out our <br />
+            products
+          </h2>
+          <p className="product__description">
+            Here are some selected plants from our showroom, all are in
+            excellent shape and has a long life span. Buy and enjoy best
+            quality.
+          </p>
+          <div className="product__container grid">
+            {ProductsData.map((i) => (
+              <article className="product__card" key={i}>
+                <img src={i.img} alt="" className="product__img" />
+                <h3 className="product__title">{i.name}</h3>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
     </Wrapper>
   );
 };
 const Wrapper = styled.div`
-  .button--flex {
-    display: inline-flex;
-    align-items: center;
-    column-gap: 0.5rem;
+  .card {
+    border-radius: 2rem;
+    padding-top: 3rem;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1);
   }
   .product__description {
     text-align: center;
@@ -117,41 +57,15 @@ const Wrapper = styled.div`
     transition: 0.3s;
   }
 
-  .product__title,
-  .product__price {
+  .product__title {
     font-size: var(--small-font-size);
     font-weight: var(--font-semi-bold);
     color: var(--first-color-alt);
+    text-align: center;
   }
 
   .product__title {
     margin-bottom: 0.25rem;
-  }
-
-  .product__button {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    background-color: var(--first-color);
-    color: #fff;
-    padding: 0.25rem;
-    border-radius: 0.35rem;
-    font-size: 1.15rem;
-  }
-
-  .product__button:hover {
-    background-color: var(--first-color-alt);
-  }
-
-  .product__circle {
-    width: 90px;
-    height: 90px;
-    background-color: var(--lighten-container-color);
-    border-radius: 50%;
-    position: absolute;
-    top: 18%;
-    left: 5%;
-    transition: 0.4s;
   }
 
   .product__card:hover .product__img {
@@ -194,13 +108,7 @@ const Wrapper = styled.div`
       width: 160px;
     }
 
-    .product__circle {
-      width: 110px;
-      height: 110px;
-    }
-
-    .product__title,
-    .product__price {
+    .product__title {
       font-size: var(--normal-font-size);
     }
   }
