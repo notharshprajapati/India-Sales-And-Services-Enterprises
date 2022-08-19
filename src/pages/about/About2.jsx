@@ -1,9 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Button from "../../UI/Button";
-import { NavLink } from "react-router-dom";
 import about2 from "../../assets/about2.jpg";
-import Underline from "../../UI/Underline";
 const About2 = () => {
   return (
     <Wrapper>

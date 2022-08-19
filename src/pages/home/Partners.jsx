@@ -55,6 +55,7 @@ const Wrapper = styled.div`
     text-decoration-color: Var(--first-color);
   }
   .card {
+    background-color: var(--card-color);
     border-radius: 2rem;
     padding-top: 3rem;
     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1);

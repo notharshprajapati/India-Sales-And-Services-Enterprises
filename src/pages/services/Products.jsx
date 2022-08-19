@@ -5,16 +5,15 @@ const Products = () => {
   return (
     <Wrapper>
       <section className="product section container" id="products">
+        <h2 className="section__title-center">
+          Check out our <br />
+          products
+        </h2>
+        <p className="product__description" style={{ marginBottom: "2rem" }}>
+          Here are some selected plants from our showroom, all are in excellent
+          shape and has a long life span. Buy and enjoy best quality.
+        </p>
         <div className="card">
-          <h2 className="section__title-center">
-            Check out our <br />
-            products
-          </h2>
-          <p className="product__description">
-            Here are some selected plants from our showroom, all are in
-            excellent shape and has a long life span. Buy and enjoy best
-            quality.
-          </p>
           <div className="product__container grid">
             {ProductsData.map((i) => (
               <article className="product__card" key={i}>
@@ -30,6 +29,7 @@ const Products = () => {
 };
 const Wrapper = styled.div`
   .card {
+    background-color: var(--card-color);
     border-radius: 2rem;
     padding-top: 3rem;
     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1);
@@ -55,12 +55,13 @@ const Wrapper = styled.div`
     justify-self: center;
     margin-bottom: var(--mb-0-75);
     transition: 0.3s;
+    border-radius: 2rem;
   }
 
   .product__title {
     font-size: var(--small-font-size);
     font-weight: var(--font-semi-bold);
-    color: var(--first-color-alt);
+    color: var(--first-color);
     text-align: center;
   }
 

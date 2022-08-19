@@ -21,6 +21,7 @@
   --lighten-container-color: hsl(var(--hue), 24%, 92%);
   --question-container-color: hsl(var(--hue), 24%, 92%);
   --container-color: #fff;
+  --card-color: hsl(var(--hue), 50%, 95%);
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -127,6 +128,7 @@ img {
   --container-color: hsl(var(--hue), 8%, 16%);
   --lighten-container-color: hsl(var(--hue), 8%, 16%);
   --question-container-color: hsl(var(--hue), 8%, 20%);
+  --card-color: hsl(var(--hue), 10%, 25%);
 }
 .dark-theme .steps__bg,
 .dark-theme .questions {
