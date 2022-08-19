@@ -14,7 +14,7 @@ const Footer = () => {
       <footer className="footer section">
         <div className="footer__container container grid">
           <div className="footer__content">
-            <a href="#" className="footer__logo">
+            <a href="/" className="footer__logo">
               India Sales And Services Enterprises
             </a>
             <h3 className="footer__title">
