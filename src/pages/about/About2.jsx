@@ -1,4 +1,5 @@
 import React from "react";
+import { Fade } from "react-reveal";
 import styled from "styled-components";
 import about2 from "../../assets/about2.jpg";
 const About2 = () => {
@@ -6,24 +7,29 @@ const About2 = () => {
     <Wrapper>
       <section className="home">
         <div className="home__container container grid">
-          <img src={about2} alt="" className="home__img" />
-          <div className="home__data">
-            <p className="home__description" style={{ marginTop: "1rem" }}>
-              Our experience and the market analysis helped us to pioneer in the
-              retro-fitment services, and we delivered this service all over
-              India. The performance of these machines is one of the best
-              retro-fitments in the Industry.
-            </p>
-            <p className="home__description">
-              The boost in the Industrial sector pushed growth demanded
-              additional specialized services and that led to dramatic growth of
-              the company. Our presence in all major industrial hubs was
-              established by launching Offices across India and making the best
-              technician available. Considering the quality of service and the
-              organizational strength, associations and representations
-              forIndian market were offered by world renowned companies.
-            </p>
-          </div>
+          <Fade left delay={250}>
+            <img src={about2} alt="" className="home__img" />
+          </Fade>
+          <Fade right delay={250}>
+            <div className="home__data">
+              <p className="home__description" style={{ marginTop: "1rem" }}>
+                Our experience and the market analysis helped us to pioneer in
+                the retro-fitment services, and we delivered this service all
+                over India. The performance of these machines is one of the best
+                retro-fitments in the Industry.
+              </p>
+              <p className="home__description">
+                The boost in the Industrial sector pushed growth demanded
+                additional specialized services and that led to dramatic growth
+                of the company. Our presence in all major industrial hubs was
+                established by launching Offices across India and making the
+                best technician available. Considering the quality of service
+                and the organizational strength, associations and
+                representations forIndian market were offered by world renowned
+                companies.
+              </p>
+            </div>
+          </Fade>
         </div>
       </section>
     </Wrapper>

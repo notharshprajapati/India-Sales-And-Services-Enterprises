@@ -1,4 +1,5 @@
 import React from "react";
+import { Fade } from "react-reveal";
 import styled from "styled-components";
 
 import partners1 from "../../assets/Partners/partners1.png";
@@ -34,15 +35,18 @@ const Products = () => {
     <Wrapper>
       <section className="product section container" id="products">
         <div className="card">
-          <h2 className="section__title-center">Our Partners</h2>
-
-          <div className="product__container grid">
-            {data.map((item, i) => (
-              <article className="product__card" key={i}>
-                <img src={item.img} alt="" className="product__img" />
-              </article>
-            ))}
-          </div>
+          <Fade bottom>
+            <h2 className="section__title-center">Our Partners</h2>
+          </Fade>
+          <Fade bottom cascade>
+            <div className="product__container grid">
+              {data.map((item, i) => (
+                <article className="product__card" key={i}>
+                  <img src={item.img} alt="" className="product__img" />
+                </article>
+              ))}
+            </div>
+          </Fade>
         </div>
       </section>
     </Wrapper>

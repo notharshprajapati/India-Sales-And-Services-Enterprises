@@ -4,32 +4,38 @@ import Button from "../../UI/Button";
 import { NavLink } from "react-router-dom";
 import home_about from "../../assets/home_about.jpg";
 import Underline from "../../UI/Underline";
+import { Fade } from "react-reveal";
 const About = () => {
   return (
     <Wrapper>
       <section className="home">
         <div className="home__container container grid">
-          <img src={home_about} alt="" className="home__img" />
-          <div className="home__data">
-            <h1 className="home__title">About us</h1>
-            <Underline />
-            <h3>
-              India sales and services enterprises established in the year 2016
-            </h3>
-            <p className="home__description">
-              in Delhi, India, with an average office setup to serve the
-              Material Handling Industry.
-            </p>
-            <p className="home__description" style={{ marginBottom: "2rem" }}>
-              Since inception the company&#39;s goal has been “Best Quality at
-              Economical Cost with Quick Service” and this is the Success
-              Mantra. Customers&#39; feedback and support has made us one of the
-              reputed names in the material handling industry.
-            </p>
-            <NavLink to="/about">
-              <Button text="Read more" />
-            </NavLink>
-          </div>
+          <Fade left delay={250}>
+            <img src={home_about} alt="" className="home__img" />
+          </Fade>
+          <Fade right delay={250}>
+            <div className="home__data">
+              <h1 className="home__title">About us</h1>
+              <Underline />
+              <h3>
+                India sales and services enterprises established in the year
+                2016
+              </h3>
+              <p className="home__description">
+                in Delhi, India, with an average office setup to serve the
+                Material Handling Industry.
+              </p>
+              <p className="home__description" style={{ marginBottom: "2rem" }}>
+                Since inception the company&#39;s goal has been “Best Quality at
+                Economical Cost with Quick Service” and this is the Success
+                Mantra. Customers&#39; feedback and support has made us one of
+                the reputed names in the material handling industry.
+              </p>
+              <NavLink to="/about">
+                <Button text="Read more" />
+              </NavLink>
+            </div>
+          </Fade>
         </div>
       </section>
     </Wrapper>

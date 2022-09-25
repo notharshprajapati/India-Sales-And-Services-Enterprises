@@ -1,4 +1,5 @@
 import React from "react";
+import { Fade } from "react-reveal";
 import styled from "styled-components";
 
 import home from "../../assets/home.jpg";
@@ -9,20 +10,24 @@ const Intro = () => {
     <Wrapper>
       <section className="home">
         <div className="home__container container grid">
-          <img src={home} alt="" className="home__img" />
-          <div className="home__data">
-            <h3>Material Handling Equipment Services</h3>
-            <h1 className="home__title">
-              Pioneers of the
-              <br /> material handling <br />
-              industry in india
-            </h1>
-            <Underline />
-            <p className="home__description">
-              We are the best when it comes to material handling solutions in
-              India.
-            </p>
-          </div>
+          <Fade right>
+            <img src={home} alt="" className="home__img" />
+          </Fade>
+          <Fade left>
+            <div className="home__data">
+              <h3>Material Handling Equipment Services</h3>
+              <h1 className="home__title">
+                Pioneers of the
+                <br /> material handling <br />
+                industry in india
+              </h1>
+              <Underline />
+              <p className="home__description">
+                We are the best when it comes to material handling solutions in
+                India.
+              </p>
+            </div>
+          </Fade>
         </div>
       </section>
     </Wrapper>

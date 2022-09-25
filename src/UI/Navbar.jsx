@@ -7,54 +7,57 @@ import { RiCloseLine, RiMenuLine } from "react-icons/ri";
 
 import { links } from "../Const.js";
 import Theme from "./Theme.jsx";
+import { Fade } from "react-reveal";
 
 const Navbar = ({ scrollPosition }) => {
   const [showNav, setShowNav] = useState(false);
   return (
     <Wrapper>
-      <header
-        className={`${
-          scrollPosition < 200 ? "header" : "header scroll-header"
-        }`}
-      >
-        <nav className="nav container">
-          <NavLink to="/" className="nav__logo">
-            <TbForklift /> India Sales And Services Enterprises
-          </NavLink>
+      <Fade down>
+        <header
+          className={`${
+            scrollPosition < 200 ? "header" : "header scroll-header"
+          }`}
+        >
+          <nav className="nav container">
+            <NavLink to="/" className="nav__logo">
+              <TbForklift /> India Sales And Services Enterprises
+            </NavLink>
 
-          <div className={`${showNav ? "nav__menu show-menu" : "nav__menu"}`}>
-            <ul className="nav__list">
-              {links.map((link) => {
-                const { id, text, url } = link;
-                return (
-                  <li className="nav__item" key={id}>
-                    <NavLink
-                      to={url}
-                      className={({ isActive }) =>
-                        isActive ? "active-link" : "nav__link"
-                      }
-                    >
-                      {text}
-                    </NavLink>
-                  </li>
-                );
-              })}
-            </ul>
-            <RiCloseLine
-              className="nav__close"
-              onClick={() => setShowNav(false)}
-            />
-          </div>
+            <div className={`${showNav ? "nav__menu show-menu" : "nav__menu"}`}>
+              <ul className="nav__list">
+                {links.map((link) => {
+                  const { id, text, url } = link;
+                  return (
+                    <li className="nav__item" key={id}>
+                      <NavLink
+                        to={url}
+                        className={({ isActive }) =>
+                          isActive ? "active-link" : "nav__link"
+                        }
+                      >
+                        {text}
+                      </NavLink>
+                    </li>
+                  );
+                })}
+              </ul>
+              <RiCloseLine
+                className="nav__close"
+                onClick={() => setShowNav(false)}
+              />
+            </div>
 
-          <div className="nav__btns">
-            <Theme />
-            <RiMenuLine
-              className="nav__toggle"
-              onClick={() => setShowNav(true)}
-            />
-          </div>
-        </nav>
-      </header>
+            <div className="nav__btns">
+              <Theme />
+              <RiMenuLine
+                className="nav__toggle"
+                onClick={() => setShowNav(true)}
+              />
+            </div>
+          </nav>
+        </header>
+      </Fade>
     </Wrapper>
   );
 };

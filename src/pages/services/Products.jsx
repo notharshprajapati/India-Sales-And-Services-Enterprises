@@ -1,27 +1,35 @@
 import React from "react";
+import { Fade } from "react-reveal";
 import styled from "styled-components";
 import { ProductsData } from "../../Const";
 const Products = () => {
   return (
     <Wrapper>
-      <section className="product section container" id="products">
-        <h2 className="section__title-center">
-          Check out our <br />
-          products
-        </h2>
-        <p className="product__description" style={{ marginBottom: "2rem" }}>
-          Here are some selected plants from our showroom, all are in excellent
-          shape and has a long life span. Buy and enjoy best quality.
-        </p>
+      <section className="product section container">
+        <Fade bottom>
+          <h2 className="section__title-center">
+            Check out our <br />
+            products
+          </h2>
+        </Fade>
+        <Fade bottom delay={250}>
+          <p className="product__description" style={{ marginBottom: "2rem" }}>
+            Here are some selected plants from our showroom, all are in
+            excellent shape and has a long life span. Buy and enjoy best
+            quality.
+          </p>
+        </Fade>
         <div className="card">
-          <div className="product__container grid">
-            {ProductsData.map((i) => (
-              <article className="product__card" key={i}>
-                <img src={i.img} alt="" className="product__img" />
-                <h3 className="product__title">{i.name}</h3>
-              </article>
-            ))}
-          </div>
+          <Fade bottom cascade delay={250}>
+            <div className="product__container grid">
+              {ProductsData.map((item, i) => (
+                <article className="product__card" key={i}>
+                  <img src={item.img} alt="" className="product__img" />
+                  <h3 className="product__title">{item.name}</h3>
+                </article>
+              ))}
+            </div>
+          </Fade>
         </div>
       </section>
     </Wrapper>

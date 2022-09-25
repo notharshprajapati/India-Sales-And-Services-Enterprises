@@ -4,33 +4,38 @@ import Button from "../../UI/Button";
 import { NavLink } from "react-router-dom";
 import about_about from "../../assets/about_about.jpg";
 import Underline from "../../UI/Underline";
+import { Fade } from "react-reveal";
 const About1 = () => {
   return (
     <Wrapper>
       <section className="home">
         <div className="home__container container grid">
-          <img src={about_about} alt="" className="home__img" />
-          <div className="home__data">
-            <h1 className="home__title">About us</h1>
-            <Underline />
+          <Fade right>
+            <img src={about_about} alt="" className="home__img" />
+          </Fade>
+          <Fade left>
+            <div className="home__data">
+              <h1 className="home__title">About us</h1>
+              <Underline />
 
-            <p
-              className="home__description"
-              style={{ margin: "2rem 2rem 2rem 0rem" }}
-            >
-              India Sales and Services Enterprises was established in the year
-              2016 in Delhi, India. From its humble beginnings, the company now
-              aims at achieving the pinnacle in the material handling equipment
-              industry. Since its inception, ISSE’s primary goal has been to
-              provide best quality at competitive prices combined with
-              impeccable services. Customers’ feedback and support has made us
-              one of the reputed names in the material handling industry
-            </p>
+              <p
+                className="home__description"
+                style={{ margin: "2rem 2rem 2rem 0rem" }}
+              >
+                India Sales and Services Enterprises was established in the year
+                2016 in Delhi, India. From its humble beginnings, the company
+                now aims at achieving the pinnacle in the material handling
+                equipment industry. Since its inception, ISSE’s primary goal has
+                been to provide best quality at competitive prices combined with
+                impeccable services. Customers’ feedback and support has made us
+                one of the reputed names in the material handling industry
+              </p>
 
-            <NavLink to="/about">
-              <Button text="Read more" />
-            </NavLink>
-          </div>
+              <NavLink to="/about">
+                <Button text="Read more" />
+              </NavLink>
+            </div>
+          </Fade>
         </div>
       </section>
     </Wrapper>

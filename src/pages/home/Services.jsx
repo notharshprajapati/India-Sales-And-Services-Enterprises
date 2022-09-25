@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { RiAddLine } from "react-icons/ri";
+import { Fade } from "react-reveal";
 
 import styled from "styled-components";
-import Underline from "../../UI/Underline";
 
 const data = [
   {
@@ -48,44 +48,51 @@ const Services = () => {
   return (
     <Wrapper>
       <section className="questions section " id="faqs">
-        <h2 className="section__title-center questions__title container">
-          Our Services
-        </h2>
-
+        <Fade bottom>
+          <h2 className="section__title-center questions__title container">
+            Our Services
+          </h2>
+        </Fade>
         <div className="container grid">
-          <Underline />
-          <div className="group">
-            {data.map((item, i) => (
-              <div
-                className={
-                  selected === i
-                    ? " questions__item accordion-open"
-                    : "questions__item "
-                }
-                onClick={() => toggle(i)}
-                key={i}
-              >
-                <header className="questions__header">
-                  <RiAddLine className="questions__icon" />
-                  <h3 className="questions__item-title">{item.question}</h3>
-                </header>
+          <Fade bottom cascade>
+            <div className="group">
+              {data.map((item, i) => (
                 <div
-                  className="questions__content "
-                  style={{
-                    height: `${selected === i ? "80px" : "0px "}`,
-                  }}
+                  className={
+                    selected === i
+                      ? " questions__item accordion-open"
+                      : "questions__item "
+                  }
+                  onClick={() => toggle(i)}
+                  key={i}
                 >
-                  <p className="questions__description ">{item.answer}</p>
+                  <header className="questions__header">
+                    <RiAddLine className="questions__icon" />
+                    <h3 className="questions__item-title">{item.question}</h3>
+                  </header>
+                  <div
+                    className="questions__content "
+                    style={{
+                      height: `${selected === i ? "80px" : "0px "}`,
+                    }}
+                  >
+                    <p className="questions__description ">{item.answer}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </Fade>
         </div>
       </section>
     </Wrapper>
   );
 };
 const Wrapper = styled.div`
+  h2 {
+    text-decoration: underline;
+    text-underline-offset: 2rem;
+    text-decoration-color: Var(--first-color);
+  }
   .group {
     margin: 2rem 0rem 2rem 0rem;
   }

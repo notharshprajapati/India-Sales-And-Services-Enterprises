@@ -1,39 +1,45 @@
 import React from "react";
+import { Fade } from "react-reveal";
 import styled from "styled-components";
 const Mission = () => {
   return (
     <Wrapper>
       <section className="mission section container">
         <div className="mission__bg">
-          <h2 className="section__title-center mission__title">
-            Company Mission
-          </h2>
-          <div className="mission__container grid">
-            <div className="mission__card">
-              <div className="mission__card-number">01</div>
-              <h3 className="mission__card-title">Expansion</h3>
-              <p className="mission__card-description">
-                We have expanded our skills & expertise in Material Handling
-                Equipments.
-              </p>
+          <Fade bottom>
+            <h2 className="section__title-center mission__title">
+              Company Mission
+            </h2>
+          </Fade>
+          <Fade bottom cascade delay={250}>
+            <div className="mission__container grid">
+              <div className="mission__card">
+                <div className="mission__card-number">01</div>
+                <h3 className="mission__card-title">Expansion</h3>
+                <p className="mission__card-description">
+                  We have expanded our skills & expertise in Material Handling
+                  Equipments.
+                </p>
+              </div>
+              <div className="mission__card">
+                <div className="mission__card-number">02</div>
+                <h3 className="mission__card-title">Solution provider</h3>
+                <p className="mission__card-description">
+                  fully transformed as Complete Solution provider for
+                  requirement of Spares & Services of Material Handling
+                  Equipments
+                </p>
+              </div>
+              <div className="mission__card">
+                <div className="mission__card-number">03</div>
+                <h3 className="mission__card-title">Quick Delivery</h3>
+                <p className="mission__card-description">
+                  Our delivery process is easy, you receive the equipments
+                  direct to your desired location.
+                </p>
+              </div>
             </div>
-            <div className="mission__card">
-              <div className="mission__card-number">02</div>
-              <h3 className="mission__card-title">Solution provider</h3>
-              <p className="mission__card-description">
-                fully transformed as Complete Solution provider for requirement
-                of Spares & Services of Material Handling Equipments
-              </p>
-            </div>
-            <div className="mission__card">
-              <div className="mission__card-number">03</div>
-              <h3 className="mission__card-title">Quick Delivery</h3>
-              <p className="mission__card-description">
-                Our delivery process is easy, you receive the equipments direct
-                to your desired location.
-              </p>
-            </div>
-          </div>
+          </Fade>
         </div>
       </section>
     </Wrapper>

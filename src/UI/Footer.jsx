@@ -7,67 +7,72 @@ import card1 from "../assets/card1.png";
 import card2 from "../assets/card2.png";
 import card3 from "../assets/card3.png";
 import card4 from "../assets/card4.png";
+import { Fade } from "react-reveal";
 
 const Footer = () => {
   return (
     <Wrapper>
       <footer className="footer section">
-        <div className="footer__container container grid">
-          <div className="footer__content">
-            <a href="/" className="footer__logo">
-              India Sales And Services Enterprises
-            </a>
-            <h3 className="footer__title">
-              Subscribe to our newsletter <br />
-              to stay update
-            </h3>
-            <div className="footer__subscribe">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="footer__input"
-              />
-              <Button text="Subscribe" />
+        <Fade bottom cascade>
+          <div className="footer__container container grid">
+            <div className="footer__content">
+              <a href="/" className="footer__logo">
+                India Sales And Services Enterprises
+              </a>
+              <h3 className="footer__title">
+                Subscribe to our newsletter <br />
+                to stay update
+              </h3>
+              <div className="footer__subscribe">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="footer__input"
+                />
+                <Button text="Subscribe" />
+              </div>
+            </div>
+
+            <div className="footer__content">
+              <h3 className="footer__title">Our Address</h3>
+              <ul className="footer__data">
+                <li className="footer__information">
+                  GROUND FLOOR, PLOT NO.88-M KH NO. 45/17, GAIL NO. 1, SUVIDHA
+                  ENCLAVE, BAPROLA VIHAR, BLOCK E, NEAR JAGDISH VATIKA, Delhi,
+                  110043
+                </li>
+              </ul>
+            </div>
+
+            <div className="footer__content">
+              <h3 className="footer__title">Contact Us</h3>
+              <ul className="footer__data">
+                <li className="footer__information">+91 70655 43498</li>
+                <li className="footer__information">
+                  marketing@indiasalesservicesmhe.com
+                </li>
+                <li className="footer__information">
+                  sales@indiasalesservicesmhe.com
+                </li>
+              </ul>
+            </div>
+
+            <div className="footer__content">
+              <h3 className="footer__title">We accept all credit cards</h3>
+              <div className="footer__cards">
+                <img src={card1} alt="" className="footer__card" />
+                <img src={card2} alt="" className="footer__card" />
+                <img src={card3} alt="" className="footer__card" />
+                <img src={card4} alt="" className="footer__card" />
+              </div>
             </div>
           </div>
-
-          <div className="footer__content">
-            <h3 className="footer__title">Our Address</h3>
-            <ul className="footer__data">
-              <li className="footer__information">
-                GROUND FLOOR, PLOT NO.88-M KH NO. 45/17, GAIL NO. 1, SUVIDHA
-                ENCLAVE, BAPROLA VIHAR, BLOCK E, NEAR JAGDISH VATIKA, Delhi,
-                110043
-              </li>
-            </ul>
-          </div>
-
-          <div className="footer__content">
-            <h3 className="footer__title">Contact Us</h3>
-            <ul className="footer__data">
-              <li className="footer__information">+91 70655 43498</li>
-              <li className="footer__information">
-                marketing@indiasalesservicesmhe.com
-              </li>
-              <li className="footer__information">
-                sales@indiasalesservicesmhe.com
-              </li>
-            </ul>
-          </div>
-
-          <div className="footer__content">
-            <h3 className="footer__title">We accept all credit cards</h3>
-            <div className="footer__cards">
-              <img src={card1} alt="" className="footer__card" />
-              <img src={card2} alt="" className="footer__card" />
-              <img src={card3} alt="" className="footer__card" />
-              <img src={card4} alt="" className="footer__card" />
-            </div>
-          </div>
-        </div>
-        <p className="footer__copy">
-          &#169; India Sales And Services Enterprises. All rigths reserved
-        </p>
+        </Fade>
+        <Fade bottom cascade>
+          <p className="footer__copy">
+            &#169; India Sales And Services Enterprises. All rigths reserved
+          </p>
+        </Fade>
       </footer>
     </Wrapper>
   );
