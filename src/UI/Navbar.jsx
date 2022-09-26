@@ -8,18 +8,17 @@ import { RiCloseLine, RiMenuLine } from "react-icons/ri";
 import { links } from "../Const.js";
 import Theme from "./Theme.jsx";
 import { Fade } from "react-reveal";
-
 const Navbar = ({ scrollPosition }) => {
   const [showNav, setShowNav] = useState(false);
   return (
     <Wrapper>
-      <Fade down>
-        <header
-          className={`${
-            scrollPosition < 200 ? "header" : "header scroll-header"
-          }`}
-        >
-          <nav className="nav container">
+      <header
+        className={`${
+          scrollPosition < 200 ? "header" : "header scroll-header"
+        }`}
+      >
+        <nav className="nav container">
+          <Fade down>
             <NavLink to="/" className="nav__logo">
               <TbForklift /> India Sales And Services Enterprises
             </NavLink>
@@ -47,17 +46,16 @@ const Navbar = ({ scrollPosition }) => {
                 onClick={() => setShowNav(false)}
               />
             </div>
-
-            <div className="nav__btns">
-              <Theme />
-              <RiMenuLine
-                className="nav__toggle"
-                onClick={() => setShowNav(true)}
-              />
-            </div>
-          </nav>
-        </header>
-      </Fade>
+          </Fade>
+          <div className="nav__btns">
+            <Theme />
+            <RiMenuLine
+              className="nav__toggle"
+              onClick={() => setShowNav(true)}
+            />
+          </div>
+        </nav>
+      </header>
     </Wrapper>
   );
 };
@@ -65,7 +63,8 @@ const Navbar = ({ scrollPosition }) => {
 const Wrapper = styled.div`
   .header {
     width: 100%;
-    background-color: var(--body-color);
+    /*  */
+    /* backdrop-filter: blur(25px); */
     position: fixed;
     top: 0;
     left: 0;
@@ -112,9 +111,13 @@ const Wrapper = styled.div`
   }
 
   @media screen and (max-width: 767px) {
+    .header {
+      background-color: var(--body-color);
+    }
     .nav__menu {
       position: fixed;
-      background-color: var(--container-color);
+      /* background-color: var(--container-color); */
+      backdrop-filter: blur(25px);
       width: 80%;
       height: 100%;
       top: 0;
@@ -177,12 +180,14 @@ const Wrapper = styled.div`
     background-color: var(--first-color);
   }
   @media screen and (min-width: 767px) {
+    .header {
+      backdrop-filter: blur(25px);
+    }
     .nav {
       height: calc(var(--header-height) + 1.5rem);
       column-gap: 3rem;
     }
-  }
-  @media screen and (min-width: 767px) {
+
     .nav__toggle,
     .nav__close {
       display: none;
